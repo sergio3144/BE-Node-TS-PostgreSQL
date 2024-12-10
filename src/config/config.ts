@@ -8,7 +8,5 @@ export const DB_PASSWORD = '3144DBS'
 export const DB_DATABASE = 'nodepg'
 export const DB_PORT = 5432
 
-console.log(process.env.HELLO)
-
 
 export const PORT = process.env.PORT || 3000

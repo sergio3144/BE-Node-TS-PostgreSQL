@@ -26,7 +26,7 @@ export const createUser = async (req: Request, res: Response): Promise<any> => {
     const user = req.body
     const { rows } = await pool.query('INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *', [ user.name, user.email ])
     
-    return res.json(
+    return res.status(201).json(
       { 
         message: 'User created',
         user: rows[0]  

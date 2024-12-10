@@ -1,8 +1,10 @@
 import express from 'express'
-import { PORT } from './config'
+import { PORT } from './config/config'
 import userRoutes from './routes/users.routes'
 import morgan from 'morgan'
 import cors from 'cors'
+import swaggerUI from 'swagger-ui-express'
+import swaggerSpec from './config/swagger'
 
 const app = express()
 
@@ -22,3 +24,5 @@ app.use(userRoutes)
 
 app.listen(PORT)
 console.log("Server on port", PORT)
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec))
