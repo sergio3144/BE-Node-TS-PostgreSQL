@@ -35,7 +35,7 @@ const router = Router();
  * /users:
  *   get:
  *     summary: Get all users
- *     tags: [Users]
+ *     tags: [users]
  *     responses:
  *       '200':
  *         description: A list of users
