@@ -32,7 +32,7 @@ const router = Router();
 
 /** 
  * @swagger
- * /users:
+ * /api/users:
  *   get:
  *     summary: Get all users
  *     tags: [Users]
@@ -48,12 +48,12 @@ const router = Router();
  * 
  * */ 
 
-router.get("/users", getUsers)
+router.get("/api/users", getUsers)
 
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *  get: 
  *    summary: Get a product by ID
  *    tags: 
@@ -81,11 +81,11 @@ router.get("/users", getUsers)
  *        description: Internal server error
  */ 
 
-router.get("/users/:id", getUserById)
+router.get("/api/users/:id", getUserById)
 
 /**
  * @swagger
- * /users:
+ * /api/users:
  *   post:
  *     summary: Create a new user
  *     tags: 
@@ -119,11 +119,11 @@ router.get("/users/:id", getUserById)
  *         description: Internal server error
  */
 
-router.post("/users", createUser)
+router.post("/api/users", createUser)
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *   put:
  *     summary: Update a user
  *     tags: 
@@ -163,11 +163,11 @@ router.post("/users", createUser)
  *       '500':
  *         description: Internal server error
  */
-router.put("/users/:id", updateUserPut)  
+router.put("/api/users/:id", updateUserPut)  
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *   delete:
  *     summary: Delete a user
  *     tags: 
@@ -194,7 +194,7 @@ router.put("/users/:id", updateUserPut)
  *         description: Internal server error
  */
 
-router.delete("/users/:id", deleteUser)
+router.delete("/api/users/:id", deleteUser)
 
 
 
